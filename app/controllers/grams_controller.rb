@@ -19,7 +19,7 @@ class GramsController < ApplicationController
   end
 
   def update
-    @gram = Gram.find_by_id(params [:id])
+    @gram = Gram.find_by_id(params[:id])
     return render_not_found if @gram.blank?
 
     @gram.update_attributes(gram_params)
